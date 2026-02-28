@@ -1,173 +1,178 @@
-<style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background-color: #f4f6f9;
-}
-
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-  background: white;
-}
-
-h1, h2 {
-  color: #0077cc;
-}
-
-img {
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-a {
-  color: #0077cc;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-footer {
-  margin-top: 20px;
-  font-size: 14px;
-  color: gray;
-}
-</style>
-
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title> My Project</title>
-  </head>
- <html>
-   
-   
- 
-  <body>
-    
-    
-  <header>
-   <main>
-   <h1> 
-   Project Overview
-   </h1>  
-   </main> 
-     </header>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Okoye Otitochukwu | Full Stack Developer</title>
+<style>
+* {margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', sans-serif;}
+body {background-color: #f5f5f5; color: #333; transition: all 0.5s ease; scroll-behavior: smooth; overflow-x: hidden;}
+a {text-decoration:none; color: inherit;}
+img {max-width: 100%; border-radius: 10px; transition: transform 0.5s ease;}
 
+/* Header */
+header {padding:20px; display:flex; justify-content:space-between; align-items:center; background:#4e54c8; color:white;}
+header h1 {font-size:1.8rem;}
+nav ul {list-style:none; display:flex; gap:20px;}
+nav ul li a {color:white; font-weight:bold;}
 
+/* Dark mode */
+body.dark-mode {background-color:#121212; color:#f5f5f5;}
+body.dark-mode header {background:#1c1c1c;}
+body.dark-mode nav ul li a {color:#f5f5f5;}
+body.dark-mode .skill-box {background-color:#1c1c1c; color:#f5f5f5;}
 
-  
+/* Hero */
+.hero {display:flex; flex-direction:column; align-items:center; text-align:center; padding:50px 20px; position: relative;}
+.hero img.profile {width:180px; height:180px; object-fit:cover; margin-bottom:20px; border-radius:50%;}
+.hero img.profile:hover {transform: rotate(15deg) scale(1.05);}
+.hero h2 {font-size:2rem; margin-bottom:10px;}
+.hero p {max-width:600px; line-height:1.6; margin-bottom:20px;}
+.hero img.webdev {width:250px; height:150px; object-fit:cover; border-radius:10px; margin-top:15px;}
 
-    <section id="home">
-<p>
-  Hi,my name is Okoye Otitochukwu, am a passionate tech learner focused on building modern and responsive websites. My journey started with learning HTML, where I understood how to structure web pages properly using semantic elements.
-After mastering the basics of structure, I advanced to CSS, where I learned how to style websites, create responsive layouts, design navigation bars, add animations, and improve user experience.
-To make my projects interactive, I began learning JavaScript, which allows me to add dynamic features such as form validation, buttons, interactive menus, and real-time updates on web pages.
-</p>
+/* Skills */
+.skills {padding:50px 20px; text-align:center;}
+.skills h2 {font-size:1.8rem; margin-bottom:30px;}
+.skill-box {display:inline-block; margin:10px; padding:15px 25px; background-color:#e0e0e0; border-radius:8px; font-weight:bold; transition: all 0.3s ease;}
+.skill-box:hover {transform:scale(1.1); background-color:#4e54c8; color:white;}
 
-   <img src="https://i.postimg.cc/6pN0wFsD/images-(2).jpg"width="350px" height="200px" >
-   
-    </section>
-    
-    
-    
-    
-    <section id="our skills">
-     <h2>
-       My Current Skills
-     </h2> 
-      <ul>
-        <li>Structuring web pages using HTML</li>
-        <li>Styling and designing responsive layouts with CSS</li>
-        <li>Adding interactivity using JavaScript</li>
-        <li>Creating simple multi-section websites</li>
-        <li>Building beginner-friendly tech company landing pages</li>
-      </ul>
-      
-    </section>
-    
-    
-    <section id="Our Journey">
-      
+/* Projects */
+.projects {padding:50px 20px; text-align:center;}
+.projects h2 {font-size:1.8rem; margin-bottom:30px;}
+.project-card {display:inline-block; width:250px; margin:10px; background-color:#e0e0e0; border-radius:10px; overflow:hidden; transition: all 0.4s ease;}
+.project-card img {width:100%; height:150px; object-fit:cover;}
+.project-card h3 {padding:10px; font-size:1.2rem;}
+.project-card p {padding:0 10px 10px 10px; font-size:0.95rem; line-height:1.4;}
+.project-card:hover {transform: translateY(-10px) scale(1.05); box-shadow:0 10px 25px rgba(0,0,0,0.3);}
 
-    <h3> My Growth Plans</h3>
-    <p>
-      I am currently advancing into Frontend Development, improving my skills in:
-    </p>
+/* Contact */
+.contact {padding:50px 20px; text-align:center;}
+.contact h2 {font-size:1.8rem; margin-bottom:20px;}
+.contact a {display:inline-block; margin:10px; padding:12px 25px; background-color:#4e54c8; color:white; border-radius:6px; font-weight:bold; transition: all 0.3s ease;}
+.contact a:hover {background-color:#3b3fc3; transform: scale(1.1); animation: pulse 0.6s infinite alternate;}
+@keyframes pulse {0%{transform: scale(1.05);}100%{transform: scale(1.12);}}
+
+footer {padding:20px; text-align:center; background-color:#4e54c8; color:white;}
+
+/* Toggle Button */
+.toggle-btn {position:fixed; bottom:20px; right:20px; width:50px; height:50px; background-color:#ffeb3b; border-radius:50%; display:flex; justify-content:center; align-items:center; cursor:pointer; box-shadow:0 5px 15px rgba(0,0,0,0.3); transition: transform 0.3s ease;}
+.toggle-btn:hover {transform: scale(1.1);}
+
+/* Confetti Canvas */
+#confetti-canvas {position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:9999;}
+
+/* Particles Background */
+.particle {position:absolute; width:5px; height:5px; background:white; border-radius:50%; opacity:0.6; animation: float 10s linear infinite;}
+@keyframes float {0%{transform:translateY(0) translateX(0);}50%{transform:translateY(-300px) translateX(100px);}100%{transform:translateY(0) translateX(-100px);}}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Okoye Otitochukwu</h1>
+  <nav>
     <ul>
-      <li>
-        Advanced CSS techniques
-      </li>
-      <li>
-        JavaScript logic and problem solving
-      </li>
-      <li>
-        Modern frontend tools and frameworks
-      </li>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-    <p>
-      My next goal is to transition into Backend Development, where I will learn:
-    </p>
-      <ul>
-        
-        <li>
-          Server-side programming
-        </li>
-        <li>
-          Databases
-        </li>
-        <li>
-          API development
-        </li>
-        <li>
-          Full-stack web application development
-        </li>
-      </ul>
-          </section>
-          
-          
-          <section id="Ending">
-            
-            
+  </nav>
+</header>
 
-      <h4>
-        Vision
-      </h4>
-      <p>
-        My long-term goal is to become a full-stack developer capable of building complete web applications — from beautiful user interfaces to powerful backend systems.
-      </p>
-      <h4>
-        Our contact
-      </h4>
-      </section>
-      
-   <aside id="Contact"   >
-   <a href="Mailto">
-     <b>okoyeotito3@gmail.com</b>
-   </a>  
-   <p></p>
-     <a href="https://wa.me/2349038679275">
-      <b>Chat us on Whatsapp</b> 
-       
-     </a>
-   </aside>
-      
-      
-</body>
+<section class="hero" id="hero">
+  <img src="https://i.postimg.cc/h4xwxXWd/FB-IMG-1701273148590.jpg" alt="Okoye Otitochukwu" class="profile">
+  <h2>Full Stack Developer & Tech Enthusiast</h2>
+  <p>Hello! I am Okoye Otitochukwu, a passionate full-stack developer skilled in building dynamic, modern, and responsive websites. I create digital experiences that are both functional and entertaining, helping clients shine online.</p>
+  <img src="https://i.postimg.cc/vmV7j6zR/images-(2).jpg" alt="Web Developer" class="webdev">
+</section>
+
+<section class="skills" id="skills">
+  <h2>My Skills</h2>
+  <div class="skill-box">HTML</div>
+  <div class="skill-box">CSS</div>
+  <div class="skill-box">JavaScript</div>
+  <div class="skill-box">React</div>
+  <div class="skill-box">Node.js</div>
+  <div class="skill-box">Express.js</div>
+  <div class="skill-box">MongoDB</div>
+  <div class="skill-box">REST API</div>
+  <div class="skill-box">Git & GitHub</div>
+  <div class="skill-box">UI/UX Design</div>
+</section>
+
+<section class="projects" id="projects">
+  <h2>My Projects</h2>
+  <div class="project-card">
+    <img src="https://i.postimg.cc/vmV7j6zR/images-(2).jpg" alt="Project Image">
+    <h3>Portfolio Website</h3>
+    <p>A fully responsive personal portfolio built with HTML, CSS, and JavaScript showcasing my skills and projects.</p>
+  </div>
+  <div class="project-card">
+    <img src="https://i.postimg.cc/vmV7j6zR/images-(2).jpg" alt="Project Image">
+    <h3>E-commerce Template</h3>
+    <p>An interactive e-commerce front-end template with product listings, dark/light mode, and animations.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Contact Me</h2>
+  <a href="mailto:okoyeotito3@gmail.com">Email Me</a>
+  <a id="whatsapp-btn" href="https://wa.me/2349038679275?text=Hello%20Otito,%20I%20am%20interested%20in%20your%20services">WhatsApp Me</a>
+</section>
 
 <footer>
-  <h6>
-    ©:okoye otito2026
-  </h6>
+  © 2026 Okoye Otitochukwu
 </footer>
-</html> 
 
-<style>
-  body{background-color: lightgrey;}
-</style>
+<div class="toggle-btn" id="toggle-btn" title="Toggle Dark/Light Mode">💡</div>
+<canvas id="confetti-canvas"></canvas>
+
+<!-- Particles -->
+<script>
+  for(let i=0;i<50;i++){
+    let p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = Math.random()*100 + 'vw';
+    p.style.top = Math.random()*100 + 'vh';
+    document.body.appendChild(p);
+  }
+</script>
+
+<script>
+  // Dark/Light Mode
+  const toggleBtn = document.getElementById('toggle-btn');
+  toggleBtn.addEventListener('click', () => { document.body.classList.toggle('dark-mode'); });
+
+  // Confetti effect for WhatsApp button
+  const canvas = document.getElementById('confetti-canvas');
+  const ctx = canvas.getContext('2d');
+  let confetti = [];
+
+  function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+  window.addEventListener('resize', resizeCanvas); resizeCanvas();
+
+  function createConfetti(x, y){
+    for(let i=0;i<30;i++){
+      confetti.push({x:x,y:y,r:Math.random()*6+4,dx:(Math.random()-0.5)*6,dy:(Math.random()-1.5)*6,color:`hsl(${Math.random()*360},100%,50%)`});
+    }
+  }
+
+  function drawConfetti(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    confetti.forEach((c,i)=>{
+      ctx.fillStyle=c.color; ctx.beginPath(); ctx.arc(c.x,c.y,c.r,0,Math.PI*2); ctx.fill();
+      c.x+=c.dx; c.y+=c.dy; c.dy+=0.05;
+      if(c.y>canvas.height){ confetti.splice(i,1); }
+    });
+    requestAnimationFrame(drawConfetti);
+  }
+  drawConfetti();
+
+  document.getElementById('whatsapp-btn').addEventListener('click', () => {
+    createConfetti(window.innerWidth/2, window.innerHeight/2);
+  });
+</script>
+
+</body>
+</html>
