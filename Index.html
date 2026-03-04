@@ -3,182 +3,238 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Okoye Otitochukwu | Full Stack Developer</title>
+<title>Okoye Otitochukwu Nicodemus | Portfolio</title>
+
 <style>
-* {margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', sans-serif;}
-body {background-color: #f5f5f5; color: #333; transition: all 0.5s ease; scroll-behavior: smooth; overflow-x: hidden;}
-a {text-decoration:none; color: inherit;}
-img {max-width: 100%; border-radius: 10px; transition: transform 0.5s ease;}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
 
-/* Header */
-header {padding:20px; display:flex; justify-content:space-between; align-items:center; background:#4e54c8; color:white;}
-header h1 {font-size:1.8rem;}
-nav ul {list-style:none; display:flex; gap:20px;}
-nav ul li a {color:white; font-weight:bold;}
+body{
+  background:#0f0f0f;
+  color:white;
+  line-height:1.6;
+}
 
-/* Dark mode */
-body.dark-mode {background-color:#121212; color:#f5f5f5;}
-body.dark-mode header {background:#1c1c1c;}
-body.dark-mode nav ul li a {color:#f5f5f5;}
-body.dark-mode .skill-box {background-color:#1c1c1c; color:#f5f5f5;}
+/* ===== NAVBAR ===== */
+header{
+  background:#000;
+  padding:20px;
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index:1000;
+}
 
-/* Hero */
-.hero {display:flex; flex-direction:column; align-items:center; text-align:center; padding:50px 20px; position: relative;}
-.hero img.profile {width:180px; height:180px; object-fit:cover; margin-bottom:20px; border-radius:50%;}
-.hero img.profile:hover {transform: rotate(15deg) scale(1.05);}
-.hero h2 {font-size:2rem; margin-bottom:10px;}
-.hero p {max-width:600px; line-height:1.6; margin-bottom:20px;}
-.hero img.webdev {width:250px; height:150px; object-fit:cover; border-radius:10px; margin-top:15px;}
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  max-width:1100px;
+  margin:auto;
+}
 
-/* Skills */
-.skills {padding:50px 20px; text-align:center;}
-.skills h2 {font-size:1.8rem; margin-bottom:30px;}
-.skill-box {display:inline-block; margin:10px; padding:15px 25px; background-color:#e0e0e0; border-radius:8px; font-weight:bold; transition: all 0.3s ease;}
-.skill-box:hover {transform:scale(1.1); background-color:#4e54c8; color:white;}
+nav h2{
+  color:#00ffcc;
+}
 
-/* Projects */
-.projects {padding:50px 20px; text-align:center;}
-.projects h2 {font-size:1.8rem; margin-bottom:30px;}
-.project-card {display:inline-block; width:250px; margin:10px; background-color:#e0e0e0; border-radius:10px; overflow:hidden; transition: all 0.4s ease;}
-.project-card img {width:100%; height:150px; object-fit:cover;}
-.project-card h3 {padding:10px; font-size:1.2rem;}
-.project-card p {padding:0 10px 10px 10px; font-size:0.95rem; line-height:1.4;}
-.project-card:hover {transform: translateY(-10px) scale(1.05); box-shadow:0 10px 25px rgba(0,0,0,0.3);}
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
+}
 
-/* Contact */
-.contact {padding:50px 20px; text-align:center;}
-.contact h2 {font-size:1.8rem; margin-bottom:20px;}
-.contact a {display:inline-block; margin:10px; padding:12px 25px; background-color:#4e54c8; color:white; border-radius:6px; font-weight:bold; transition: all 0.3s ease;}
-.contact a:hover {background-color:#3b3fc3; transform: scale(1.1); animation: pulse 0.6s infinite alternate;}
-@keyframes pulse {0%{transform: scale(1.05);}100%{transform: scale(1.12);}}
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  transition:0.3s;
+}
 
-footer {padding:20px; text-align:center; background-color:#4e54c8; color:white;}
+nav ul li a:hover{
+  color:#00ffcc;
+}
 
-/* Toggle Button */
-.toggle-btn {position:fixed; bottom:20px; right:20px; width:50px; height:50px; background-color:#ffeb3b; border-radius:50%; display:flex; justify-content:center; align-items:center; cursor:pointer; box-shadow:0 5px 15px rgba(0,0,0,0.3); transition: transform 0.3s ease;}
-.toggle-btn:hover {transform: scale(1.1);}
+/* ===== SECTIONS ===== */
+section{
+  padding:100px 20px;
+  max-width:1000px;
+  margin:auto;
+}
 
-/* Confetti Canvas */
-#confetti-canvas {position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:9999;}
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
 
-/* Particles Background */
-.particle {position:absolute; width:5px; height:5px; background:white; border-radius:50%; opacity:0.6; animation: float 10s linear infinite;}
-@keyframes float {0%{transform:translateY(0) translateX(0);}50%{transform:translateY(-300px) translateX(100px);}100%{transform:translateY(0) translateX(-100px);}}
+.hero h1{
+  font-size:42px;
+  margin-bottom:15px;
+}
+
+.hero span{
+  color:#00ffcc;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:10px 20px;
+  background:#00ffcc;
+  color:black;
+  text-decoration:none;
+  border-radius:5px;
+  transition:0.3s;
+  font-weight:bold;
+}
+
+.btn:hover{
+  background:white;
+}
+
+/* ===== CARDS ===== */
+.card{
+  background:#1a1a1a;
+  padding:25px;
+  margin:25px 0;
+  border-radius:8px;
+  transition:0.4s;
+  opacity:0;
+  transform:translateY(40px);
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+/* ===== CONTACT ===== */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#000;
+  margin-top:40px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  nav ul{
+    flex-direction:column;
+    gap:10px;
+  }
+}
 </style>
 </head>
+
 <body>
 
+<!-- ===== NAVBAR ===== -->
 <header>
-  <h1>Okoye Otitochukwu</h1>
   <nav>
+    <h2>Otito</h2>
     <ul>
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#works">Series</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 </header>
 
-<section class="hero" id="hero">
-  <img src="https://i.postimg.cc/h4xwxXWd/FB-IMG-1701273148590.jpg" alt="Okoye Otitochukwu" class="profile">
-  <h2>Full Stack Developer & Tech Enthusiast</h2>
-  <p>Hello! I am Okoye Otitochukwu, a passionate full-stack developer skilled in building dynamic, modern, and responsive websites. I create digital experiences that are both functional and entertaining, helping clients shine online.</p>
-  <img src="https://i.postimg.cc/vmV7j6zR/images-(2).jpg" alt="Web Developer" class="webdev">
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <h1>Hello, I'm <span>Okoye Otitochukwu Nicodemus</span></h1>
+  <p>Story Writer | Web Developer | Creative Thinker</p>
+  <a href="#works" class="btn">Read My Series</a>
 </section>
 
-<section class="skills" id="skills">
-  <h2>My Skills</h2>
-  <div class="skill-box">HTML</div>
-  <div class="skill-box">CSS</div>
-  <div class="skill-box">JavaScript</div>
-  <div class="skill-box">React</div>
-  <div class="skill-box">Node.js</div>
-  <div class="skill-box">Express.js</div>
-  <div class="skill-box">MongoDB</div>
-  <div class="skill-box">REST API</div>
-  <div class="skill-box">Git & GitHub</div>
-  <div class="skill-box">UI/UX Design</div>
-</section>
-
-<section class="projects" id="projects">
-  <h2>My Projects</h2>
-  <div class="project-card">
-    <img src="https://i.postimg.cc/vmV7j6zR/images-(2).jpg" alt="Project Image">
-    <h3>Portfolio Website</h3>
-    <p>A fully responsive personal portfolio built with HTML, CSS, and JavaScript showcasing my skills and projects.</p>
-  </div>
-  <div class="project-card">
-    <img src="https://i.postimg.cc/vmV7j6zR/images-(2).jpg" alt="Project Image">
-    <h3>E-commerce Template</h3>
-<div class="project-card">
-  <a href="http://storytime120.netlify.app" target="_blank">
-    <img src="https://i.postimg.cc/x8ZhYnYB/1772409578293.png" alt="Emma Story Project">
-    <h3>Night of the Last Light</h3>
-    <p>A thrilling zombie survival story about Emma fighting to survive in a fallen city. Click to read the full story.</p>
-  </a>
-</div>
-    
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+      I am a creative storyteller and web developer passionate about building
+      immersive story experiences online. I combine suspense-driven narratives
+      with clean, modern web design to bring stories to life.
+    </p>
   </div>
 </section>
 
-<section class="contact" id="contact">
+<!-- ===== WORKS ===== -->
+<section id="works">
+  <h2>Read My Series Online</h2>
+
+  <div class="card">
+    <h3>The Family – A Drug Story</h3>
+    <p>
+      A gripping crime drama centered around power, loyalty, and the hidden world of drugs.
+      Follow the tension, secrets, and dangerous choices that shape the family’s fate.
+    </p>
+    <a href="http://okoyeotito.netlify.app" target="_blank" class="btn">
+      Read The Family
+    </a>
+  </div>
+
+  <div class="card">
+    <h3>Zombie Apocalypse</h3>
+    <p>
+      A survival story set in a world consumed by chaos.
+      When society collapses and the undead rise, every decision means life or death.
+    </p>
+    <a href="https://storytimee1.netlify.app/" target="_blank" class="btn">
+      Read Zombie Series
+    </a>
+  </div>
+
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
   <h2>Contact Me</h2>
-  <a href="mailto:okoyeotito3@gmail.com">Email Me</a>
-  <a id="whatsapp-btn" href="https://wa.me/2349038679275?text=Hello%20Otito,%20I%20am%20interested%20in%20your%20services">WhatsApp Me</a>
+  <div class="card">
+    <p><strong>Phone:</strong> +2349038679275</p>
+    <a href="https://wa.me/2349038679275" class="btn">
+      Chat on WhatsApp
+    </a>
+  </div>
 </section>
 
 <footer>
-  © 2026 Okoye Otitochukwu
+  © 2026 Okoye Otitochukwu Nicodemus
 </footer>
 
-<div class="toggle-btn" id="toggle-btn" title="Toggle Dark/Light Mode">💡</div>
-<canvas id="confetti-canvas"></canvas>
-
-<!-- Particles -->
+<!-- ===== JAVASCRIPT ===== -->
 <script>
-  for(let i=0;i<50;i++){
-    let p = document.createElement('div');
-    p.className = 'particle';
-    p.style.left = Math.random()*100 + 'vw';
-    p.style.top = Math.random()*100 + 'vh';
-    document.body.appendChild(p);
-  }
-</script>
 
-<script>
-  // Dark/Light Mode
-  const toggleBtn = document.getElementById('toggle-btn');
-  toggleBtn.addEventListener('click', () => { document.body.classList.toggle('dark-mode'); });
-
-  // Confetti effect for WhatsApp button
-  const canvas = document.getElementById('confetti-canvas');
-  const ctx = canvas.getContext('2d');
-  let confetti = [];
-
-  function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-  window.addEventListener('resize', resizeCanvas); resizeCanvas();
-
-  function createConfetti(x, y){
-    for(let i=0;i<30;i++){
-      confetti.push({x:x,y:y,r:Math.random()*6+4,dx:(Math.random()-0.5)*6,dy:(Math.random()-1.5)*6,color:`hsl(${Math.random()*360},100%,50%)`});
-    }
-  }
-
-  function drawConfetti(){
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-    confetti.forEach((c,i)=>{
-      ctx.fillStyle=c.color; ctx.beginPath(); ctx.arc(c.x,c.y,c.r,0,Math.PI*2); ctx.fill();
-      c.x+=c.dx; c.y+=c.dy; c.dy+=0.05;
-      if(c.y>canvas.height){ confetti.splice(i,1); }
-    });
-    requestAnimationFrame(drawConfetti);
-  }
-  drawConfetti();
-
-  document.getElementById('whatsapp-btn').addEventListener('click', () => {
-    createConfetti(window.innerWidth/2, window.innerHeight/2);
+// Smooth scrolling
+document.querySelectorAll("a[href^='#']").forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href"))
+      .scrollIntoView({ behavior: "smooth" });
   });
+});
+
+// Fade-in animation on scroll
+const cards = document.querySelectorAll(".card");
+
+window.addEventListener("scroll", () => {
+  cards.forEach(card => {
+    const position = card.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.2;
+
+    if(position < screenPosition){
+      card.style.opacity = "1";
+      card.style.transform = "translateY(0)";
+    }
+  });
+});
+
 </script>
 
 </body>
